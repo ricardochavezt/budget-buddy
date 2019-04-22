@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 9.99
+  category: one
+  made_at: 2019-04-21
+  comment: MyString
+
+two:
+  amount: 9.99
+  category: two
+  made_at: 2019-04-21
+  comment: MyString
