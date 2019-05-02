@@ -69,7 +69,7 @@ class Home extends Component {
         <Divider hidden section />
         <Form loading={this.state.loading} success={this.state.registerSuccess} onSubmit={this.onSubmit}>
             <Message success content='Registrado!' />
-            <Form.Input name='amount' label='Monto' placeholder='Monto' type='number' required onChange={this.handleChange} />
+            <Form.Input name='amount' label='Monto' placeholder='Monto' type='number' step='0.01' required onChange={this.handleChange} />
             <Form.Select name='category_id' label='Categoría' placeholder='Categoría' options={categories} required onChange={this.handleChange} />
             <Form.Input name='comment' label='Comentario' placeholder='(opcional)' onChange={this.handleChange} />
             <Form.Button type='submit' color='teal' fluid>Registrar</Form.Button>
