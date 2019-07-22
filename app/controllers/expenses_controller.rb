@@ -3,7 +3,12 @@ class ExpensesController < ApiController
 
   # GET /expenses
   def index
-    @expenses = Expense.all
+    if params[:all]
+      @expenses = Expense.all.order(made_at: :desc, created_at: :desc)
+    else
+      @expenses = Expense.where(made_at: (Date.today - 1.month)..Date.today)
+        .order(made_at: :desc, created_at: :desc)
+    end
 
     render json: @expenses
   end
